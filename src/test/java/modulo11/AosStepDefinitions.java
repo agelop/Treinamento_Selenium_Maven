@@ -51,7 +51,9 @@ public class AosStepDefinitions {
 	@When("seleciona {string}")
 	public void seleciona(String categoria) {
 		// Clicar na Categoria
-		WebElement categoriaLink = driver.findElement(By.xpath("//*[.=\"" + categoria + "\"]"));
+		//WebElement categoriaLink = driver.findElement(By.xpath("//*[.=\"" + categoria + "\"]"));
+		//WebElement categoriaLink = driver.findElement(By.partialLinkText(categoria));
+		WebElement categoriaLink = driver.findElement(By.xpath("//span[text()=\"" + categoria + "\"]"));
 		categoriaLink.click();
 	}
 
